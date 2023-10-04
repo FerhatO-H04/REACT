@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {Card} from "./components/card"
+import {Header} from "./components/header"
+import Data from "./PropsArray.jsx"
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+export function App(){
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+  const cards = Data.map(item =>{
+    return(
+            <Card
+              img ={item.img}
+              country = {item.country}
+              location = {item.location}
+              locationName = {item.locationName}
+              date = {item.date}
+              text = {item.text}
 
-export default App
+
+            />
+          )
+        })
+
+  return(
+      <div className="container">
+
+        <Header/>
+        <section>
+          {cards}
+        </section>
+      </div>
+    )
+  }
+
+
+
