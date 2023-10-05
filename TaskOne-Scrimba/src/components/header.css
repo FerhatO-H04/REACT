@@ -1,0 +1,22 @@
+.header{
+    height: 55px;
+    background-color:#F55A5A ;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.header--title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title--logo{
+    margin-right: 4px;
+}
+
+.title--text{
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
