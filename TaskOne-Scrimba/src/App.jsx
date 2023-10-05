@@ -14,20 +14,19 @@ export function App(){
               locationName = {item.locationName}
               date = {item.date}
               text = {item.text}
-
-
             />
           )
         })
 
   return(
-      <div className="container">
-
-        <Header/>
-        <section>
+      <>
+        <header>
+          <Header/>
+        </header>
+        <main>
           {cards}
-        </section>
-      </div>
+        </main>
+      </>
     )
   }
 
